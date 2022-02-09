@@ -31,6 +31,7 @@ def get_data_UA(wavs):
 
     for wav in wavs:
         speaker, block, word_key, mic = wav.split('_')
+        # use only the 155 words shared by all speakers
         if word_key.startswith('U'):
             # word_key = '_'.join([block, word_key])
             continue
